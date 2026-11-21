@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muhammad Ikram Mangaraja Siregar — Portfolio</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Montserrat & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome Icons for aesthetic social & tech indicators -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#111315',
+            brandSurface: '#181B1E',
+            brandSurfaceAlt: '#212529',
+            brandAccent: '#2D8CFF',
+            brandMuted: '#94A3B8',
+            brandBorder: '#272B30'
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="custom-layout">
+    body {
+      background-color: #111315;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    /* Subtle dot grid pattern backdrop */
+    .bg-grid-pattern {
+      background-size: 36px 36px;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+
+    /* Radial gradient vignette mask for moody desk backdrop */
+    .hero-mask {
+      mask-image: radial-gradient(circle at 65% 50%, black 25%, rgba(0, 0, 0, 0.6) 55%, transparent 75%);
+      -webkit-mask-image: radial-gradient(circle at 65% 50%, black 25%, rgba(0, 0, 0, 0.6) 55%, transparent 75%);
+    }
+
+    /* Soft edge dissolution for portrait image */
+    .portrait-mask {
+      mask-image: linear-gradient(to right, transparent 0%, black 30%, black 80%, transparent 100%),
+                  linear-gradient(to bottom, black 80%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%, black 80%, transparent 100%),
+                          linear-gradient(to bottom, black 80%, transparent 100%);
+      mask-composite: intersect;
+      -webkit-mask-composite: source-in;
+    }
+
+    /* Custom progress track with target-ring aesthetic matching reference */
+    .progress-track {
+      position: relative;
+      height: 2px;
+      background-color: #2D333B;
+      width: 100%;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background-color: #64748B;
+    }
+
+    .progress-dot {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      background-color: #111315;
+      border: 2px solid #2D8CFF;
+      box-shadow: 0 0 8px rgba(45, 140, 255, 0.6);
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="selection:bg-brandAccent selection:text-white antialiased bg-grid-pattern" data-mode="connect">
+<!-- BEGIN: Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-brandDark/85 border-b border-brandBorder/60 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Primary Navigation Links -->
+<nav class="flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase font-heading" data-purpose="site-navigation">
+<a class="relative group transition-colors duration-200 text-brandMuted" href="#home">
+          Home
+          
+</a>
+<a class="hover:text-white transition-colors duration-200 text-white" href="#about">
+          About
+        <span class="absolute -bottom-1 left-0 w-full h-[2px] bg-brandAccent rounded-full"></span></a>
+<a class="hover:text-white transition-colors duration-200 text-brandMuted" href="#resume">
+          Resume
+        </a>
+<a class="text-brandMuted hover:text-white transition-colors duration-200" href="#contact">
+          Contact
+        </a>
+</nav>
+<!-- Right Contact Info Badge -->
+<div class="hidden sm:flex items-center space-x-2 text-xs font-heading font-medium tracking-wider text-brandMuted border border-brandBorder px-3.5 py-1.5 rounded-full bg-brandSurface/60 backdrop-blur-sm">
+<i class="fa-regular fa-envelope text-brandAccent text-xs"></i>
+<a class="hover:text-white transition-colors" href="mailto:ikramsiregar31@gmail.com">ikramsiregar31@gmail.com</a>
+</div>
+</div>
+</header>
+<!-- END: Navigation -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden border-b border-brandBorder" id="home">
+<!-- Moody Workspace Visual (Right Backdrop matching Reference Slide 1) -->
+<div class="absolute right-0 top-0 w-full lg:w-3/5 h-full z-0 opacity-40 lg:opacity-75 hero-mask pointer-events-none select-none">
+<img alt="Dark ambient minimalist workspace setup with monitor and lamp" class="w-full h-full object-cover object-center filter brightness-90 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPUgqMFTsoarL7Ad29r_SHzozWKqEECVPvFH92vxBQF7ysRmEqLaXNLyRTgRrn6P8W-AOLmlC5_jxMlwxJ1lRpVEB_N1AmEDKIFbn11HLoeePnbfuWNHw3Va2mfflsMJGMbi2-5RstHeIY8yGD3StbYUWiYSkOxBmgSt9zStkEmvbIOf_q1ph0WB51i9m2oSHscFD7OY1ZVTzmJMe6qdczAVnKnS4-abu_IcoG6cw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/50 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-brandDark/40"></div>
+</div>
+<!-- Hero Content Container -->
+<div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+<div class="max-w-2xl">
+<!-- Name Display -->
+<div class="space-y-1 mb-6">
+<h2 class="text-xs sm:text-sm tracking-[0.3em] font-heading font-light text-slate-300 uppercase">
+              MUHAMMAD IKRAM
+            </h2>
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-heading font-black tracking-tight text-white uppercase leading-none">
+              MANGARAJA<br/>
+<span class="text-white drop-shadow-sm">SIREGAR</span>
+</h1>
+</div>
+<!-- Subtitle / Title -->
+<p class="text-xs sm:text-sm tracking-[0.25em] font-heading font-medium text-brandMuted uppercase mb-10 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-brandAccent inline-block animate-pulse"></span>
+            MAHASISWA BARU · INSTITUT TEKNOLOGI PLN
+          </p>
+<!-- Call to Action Outlined Buttons -->
+<div class="flex flex-wrap items-center gap-4 mb-20">
+<a class="px-8 py-3 rounded-full border border-slate-400/80 text-xs font-heading font-semibold uppercase tracking-widest text-white hover:bg-white hover:text-brandDark transition-all duration-300 shadow-sm" href="#resume">
+              Resume
+            </a>
+<a class="px-8 py-3 rounded-full border border-slate-700 bg-brandSurface/40 text-xs font-heading font-semibold uppercase tracking-widest text-slate-300 hover:border-slate-400 hover:text-white transition-all duration-300 backdrop-blur-sm" href="#about">
+              About Me
+            </a>
+</div>
+<!-- Bottom Meta Bar: Socials & View Indicators -->
+<div class="pt-8 border-t border-brandBorder/60 flex items-center justify-between text-brandMuted max-w-lg">
+<!-- Social Link Icons -->
+<div class="flex items-center space-x-6 text-sm">
+<a aria-label="Email" class="hover:text-brandAccent transition-colors" href="mailto:ikramsiregar31@gmail.com" title="Email">
+<i class="fa-solid fa-envelope"></i>
+</a>
+<a aria-label="LinkedIn" class="hover:text-brandAccent transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+<a aria-label="GitHub" class="hover:text-brandAccent transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub">
+<i class="fa-brands fa-github"></i>
+</a>
+<a aria-label="Instagram" class="hover:text-brandAccent transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank" title="Instagram">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a aria-label="WhatsApp" class="hover:text-brandAccent transition-colors" href="https://wa.me/" rel="noopener noreferrer" target="_blank" title="WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+</div>
+<!-- Fullscreen / Focus Icon -->
+<div class="text-xs flex items-center gap-2 text-slate-500">
+<span class="tracking-widest uppercase font-heading text-[10px]">PLN Tech Student</span>
+<i class="fa-solid fa-expand text-slate-600"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutSection -->
+<section class="relative py-28 border-b border-brandBorder overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Content Column -->
+<div class="lg:col-span-6 space-y-8 z-10">
+<!-- Section Header matching slide 2 -->
+<div>
+<div class="inline-block relative">
+<h2 class="text-3xl sm:text-4xl font-heading font-black tracking-tight text-white uppercase pb-1">
+                  ABOUT
+                </h2>
+<div class="h-1 w-12 bg-brandAccent rounded-full mt-1"></div>
+</div>
+<p class="text-brandMuted font-mono text-xs sm:text-sm mt-3 tracking-wide">
+                ikramsiregar31@gmail.com
+              </p>
+</div>
+<!-- Personal Editorial Bio -->
+<div class="space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+<p>
+                Hai, saya <span class="text-white font-medium">Muhammad Ikram Mangaraja Siregar</span>. Mahasiswa baru dari <span class="text-white font-medium">Institut Teknologi PLN</span> yang memiliki tekad tinggi untuk terus belajar, beradaptasi, dan berkembang guna menggapai cita-cita di dunia teknologi dan rekayasa modern.
+              </p>
+<p class="text-slate-400">
+                Saat ini saya berfokus membangun pondasi akademik yang kokoh, mengeksplorasi keterampilan digital baru, melatih daya nalar analitis, serta mempersiapkan diri secara disiplin untuk meraih peluang berharga dalam program ikatan kerja.
+              </p>
+</div>
+<!-- Micro Highlights -->
+<div class="grid grid-cols-2 gap-4 py-3">
+<div class="border-l-2 border-brandAccent/60 pl-3">
+<span class="block text-white font-heading font-bold text-lg">2026</span>
+<span class="text-xs text-brandMuted uppercase tracking-wider">Angkatan Kuliah</span>
+</div>
+<div class="border-l-2 border-brandBorder pl-3">
+<span class="block text-white font-heading font-bold text-lg">90.0</span>
+<span class="text-xs text-brandMuted uppercase tracking-wider">Nilai Rata-rata SMA</span>
+</div>
+</div>
+<!-- Location Meta -->
+<div class="pt-6 border-t border-brandBorder/80">
+<div class="flex items-center space-x-3 text-xs tracking-wider uppercase font-heading text-slate-400">
+<span class="w-6 h-[1px] bg-brandAccent inline-block"></span>
+<span>Kisaran, Sumatera Utara / Indonesia</span>
+</div>
+</div>
+</div>
+<!-- Right Monochrome Portrait Image Column -->
+<div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+<div class="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-brandSurface border border-brandBorder">
+<!-- Portrait Image dissolving into the moody canvas -->
+<img alt="Muhammad Ikram Mangaraja Siregar Portrait" class="w-full h-full object-cover object-top grayscale contrast-125 brightness-90 portrait-mask" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvWDoCRHKB_3ALckfmlXpDyYCccPE-sdCCfosT1Fn7fk_pu6lB36IvuYEThwZfKe9bArQ5Tj58Sqt0U_rIHWbR-DWjiwW0ovZxmoM1yHkdWjrPUDz6vDr9XWT9wcFkwB-NIkUaEv1qL99D12xbLpIeza_NS2WZPgUOe4-k-TJyiIMcnd4u0Lf3G7AocSMI7p2cgeEVR8hRkV_GEIwt7fOEqiHEDWXsJULV7YR2O2FFCDVVGzcK4c9g"/>
+<!-- Subtle lighting accents -->
+<div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent opacity-80 pointer-events-none"></div>
+<!-- Floating Corner Badge -->
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-brandSurface/80 backdrop-blur-md border border-brandBorder/80 flex items-center justify-between text-xs">
+<div>
+<p class="font-heading font-bold text-white uppercase text-[11px] tracking-wider">M. Ikram Mangaraja Siregar</p>
+<p class="text-brandMuted text-[10px]">Institut Teknologi PLN · Freshmen</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-brandAccent/20 flex items-center justify-center text-brandAccent">
+<i class="fa-solid fa-bolt text-xs"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: ResumeAndSkillsSection -->
+<section class="py-28 border-b border-brandBorder bg-brandDark/40" id="resume">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Section Header -->
+<div class="mb-16">
+<p class="text-xs uppercase tracking-[0.25em] font-heading font-semibold text-brandAccent mb-2">Qualifications &amp; Background</p>
+<h2 class="text-3xl sm:text-5xl font-heading font-black tracking-tight text-white uppercase">
+            RESUME &amp; COMPETENCIES
+          </h2>
+</div>
+<!-- 3-Column Structured Layout (Direct equivalent of Slide 3) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+<!-- ================= COLUMN 1: SKILLS & ABILITIES ================= -->
+<div class="space-y-12">
+<!-- Group: Software & Core Skills -->
+<div>
+<div class="inline-block relative mb-6">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  LEARNING &amp; CORE SKILLS
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<!-- Skill Items with Custom Gauge Bar -->
+<div class="space-y-6">
+<!-- Skill 1 -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2.5">
+<span class="w-6 h-6 rounded bg-brandSurface border border-brandBorder text-[10px] font-mono text-brandAccent font-bold flex items-center justify-center">FL</span>
+<span class="text-slate-200 font-medium">Fast Learner &amp; Adaptability</span>
+</div>
+<span class="text-slate-400 font-mono text-[11px]">90%</span>
+</div>
+<div class="progress-track rounded-full">
+<div class="progress-fill" style="width: 90%;"></div>
+<div class="progress-dot" style="left: 90%;"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2.5">
+<span class="w-6 h-6 rounded bg-brandSurface border border-brandBorder text-[10px] font-mono text-brandAccent font-bold flex items-center justify-center">IT</span>
+<span class="text-slate-200 font-medium">Computer &amp; Digital Literacy</span>
+</div>
+<span class="text-slate-400 font-mono text-[11px]">85%</span>
+</div>
+<div class="progress-track rounded-full">
+<div class="progress-fill" style="width: 85%;"></div>
+<div class="progress-dot" style="left: 85%;"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2.5">
+<span class="w-6 h-6 rounded bg-brandSurface border border-brandBorder text-[10px] font-mono text-brandAccent font-bold flex items-center justify-center">MS</span>
+<span class="text-slate-200 font-medium">Microsoft Office (Word, PPT, Excel)</span>
+</div>
+<span class="text-slate-400 font-mono text-[11px]">82%</span>
+</div>
+<div class="progress-track rounded-full">
+<div class="progress-fill" style="width: 82%;"></div>
+<div class="progress-dot" style="left: 82%;"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2.5">
+<span class="w-6 h-6 rounded bg-brandSurface border border-brandBorder text-[10px] font-mono text-brandAccent font-bold flex items-center justify-center">PS</span>
+<span class="text-slate-200 font-medium">Analytical &amp; Problem Solving</span>
+</div>
+<span class="text-slate-400 font-mono text-[11px]">80%</span>
+</div>
+<div class="progress-track rounded-full">
+<div class="progress-fill" style="width: 80%;"></div>
+<div class="progress-dot" style="left: 80%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Languages -->
+<div>
+<div class="inline-block relative mb-6">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  LANGUAGES
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<div class="space-y-5">
+<div class="space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-slate-200">Bahasa Indonesia (Native)</span>
+<span class="text-slate-400 font-mono text-[11px]">95%</span>
+</div>
+<div class="progress-track rounded-full">
+<div class="progress-fill" style="width: 95%;"></div>
+<div class="progress-dot" style="left: 95%;"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-slate-200">English (Academic / Technical)</span>
+<span class="text-slate-400 font-mono text-[11px]">70%</span>
+</div>
+<div class="progress-track rounded-full">
+<div class="progress-fill" style="width: 70%;"></div>
+<div class="progress-dot" style="left: 70%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Personal Skills -->
+<div>
+<div class="inline-block relative mb-4">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  PERSONAL ATTRIBUTES
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed font-mono">
+                Eager to Learn · High Discipline · Collaborative Teamwork · Adaptive Mindset · Strong Curiosity
+              </p>
+</div>
+</div>
+<!-- ================= COLUMN 2: EXPERIENCE & EDUCATION TIMELINE ================= -->
+<div class="space-y-12">
+<!-- Experience / Current Milestones -->
+<div>
+<div class="inline-block relative mb-8">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  EXPERIENCE &amp; PATHWAY
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<!-- Vertical Timeline with Circular Badges -->
+<div class="relative pl-8 border-l border-brandBorder space-y-9">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<!-- Circular Node Badge -->
+<div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-brandAccent/20 border border-brandAccent flex items-center justify-center text-[9px] font-bold text-brandAccent font-mono uppercase">
+                    26+
+                  </div>
+<div>
+<h4 class="text-xs font-heading font-bold text-white uppercase tracking-wider">
+                      MAHASISWA BARU (FRESHMAN)
+                    </h4>
+<p class="text-[11px] text-brandAccent mt-0.5">Institut Teknologi PLN</p>
+<p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                      Fokus adaptasi kurikulum perguruan tinggi, pendalaman teknologi kelistrikan &amp; energi terbarukan, serta aktif mengasah kemampuan teknikal.
+                    </p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<!-- Circular Node Badge -->
+<div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-brandSurface border border-slate-600 flex items-center justify-center text-[9px] font-bold text-slate-300 font-mono uppercase">
+                    GOAL
+                  </div>
+<div>
+<h4 class="text-xs font-heading font-bold text-white uppercase tracking-wider">
+                      PERSIAPAN IKATAN KERJA
+                    </h4>
+<p class="text-[11px] text-slate-400 mt-0.5">Target &amp; Pengembangan Kompetensi</p>
+<p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                      Menyiapkan sertifikasi pendukung, menjaga capaian IPK prima, dan membangun portofolio proyek terapan untuk siap bersaing pada rekrutmen ikatan kerja.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Education Block -->
+<div>
+<div class="inline-block relative mb-6">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  EDUCATION
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<div class="space-y-5">
+<div class="p-4 rounded-xl bg-brandSurface/60 border border-brandBorder">
+<div class="flex justify-between items-baseline">
+<h4 class="text-xs font-heading font-bold text-white uppercase tracking-wide">
+                      Institut Teknologi PLN
+                    </h4>
+<span class="text-[11px] font-mono text-brandAccent">2026 - Sekarang</span>
+</div>
+<p class="text-xs text-slate-300 mt-1">Program Sarjana (S1) · Mahasiswa Baru</p>
+<p class="text-[11px] text-slate-500 mt-1">Mempelajari fundamental sains rekayasa dan teknologi terapan.</p>
+</div>
+<div class="p-4 rounded-xl bg-brandSurface/60 border border-brandBorder">
+<div class="flex justify-between items-baseline">
+<h4 class="text-xs font-heading font-bold text-white uppercase tracking-wide">
+                      SMAN 1 Kisaran
+                    </h4>
+<span class="text-[11px] font-mono text-slate-400">2023 - 2026</span>
+</div>
+<p class="text-xs text-slate-300 mt-1">Jurusan MIPA / IPA</p>
+<p class="text-[11px] text-slate-500 mt-1">Lulus dengan nilai rata-rata 90.0 dan rekam jejak kedisiplinan yang baik.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= COLUMN 3: FOCUS, CAREER & HOBBIES ================= -->
+<div class="space-y-12">
+<!-- What Am I Focusing On? -->
+<div>
+<div class="inline-block relative mb-6">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  WHAT AM I FOCUSING ON ?
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<ul class="space-y-3 text-xs text-slate-300">
+<li class="flex items-center space-x-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brandAccent"></span>
+<span>Academic Foundation — IT &amp; Engineering</span>
+</li>
+<li class="flex items-center space-x-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brandAccent"></span>
+<span>Exploring Modern Tools &amp; Digital Literacy</span>
+</li>
+<li class="flex items-center space-x-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brandAccent"></span>
+<span>Building Initial Academic &amp; Practical Projects</span>
+</li>
+<li class="flex items-center space-x-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brandAccent"></span>
+<span>Networking &amp; Organizational Collaboration</span>
+</li>
+</ul>
+</div>
+<!-- Career Objective -->
+<div>
+<div class="inline-block relative mb-6">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  CAREER OBJECTIVE
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<div class="space-y-2 text-xs text-slate-400 leading-relaxed">
+<p>
+<span class="text-slate-200 font-medium">Dedikasi Pembelajaran:</span> Menempuh pendidikan tinggi dengan konsistensi akademik tinggi untuk menyerap ilmu teknik mutakhir.
+                </p>
+<p>
+<span class="text-slate-200 font-medium">Target Ikatan Kerja:</span> Memenuhi seluruh prasyarat dan kualifikasi program ikatan dinas / kerja dengan integritas profesional.
+                </p>
+</div>
+</div>
+<!-- Hobbies & Interests (Circular Badges Matching Reference) -->
+<div>
+<div class="inline-block relative mb-6">
+<h3 class="text-xs font-heading font-bold uppercase tracking-widest text-white">
+                  HOBBIES &amp; INTERESTS
+                </h3>
+<div class="h-[2px] w-8 bg-brandAccent mt-1"></div>
+</div>
+<!-- 4 Round Pill Badges -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col items-center justify-center p-4 rounded-2xl bg-brandSurface/50 border border-brandBorder hover:border-brandAccent/60 transition-colors text-center group">
+<div class="w-11 h-11 rounded-full border border-slate-700 group-hover:border-brandAccent flex items-center justify-center text-slate-300 group-hover:text-brandAccent transition-colors mb-2.5">
+<i class="fa-solid fa-book-open-reader text-sm"></i>
+</div>
+<span class="text-[11px] font-heading font-semibold text-slate-300">Belajar Hal Baru</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-2xl bg-brandSurface/50 border border-brandBorder hover:border-brandAccent/60 transition-colors text-center group">
+<div class="w-11 h-11 rounded-full border border-slate-700 group-hover:border-brandAccent flex items-center justify-center text-slate-300 group-hover:text-brandAccent transition-colors mb-2.5">
+<i class="fa-solid fa-briefcase text-sm"></i>
+</div>
+<span class="text-[11px] font-heading font-semibold text-slate-300">Ikatan Kerja</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-2xl bg-brandSurface/50 border border-brandBorder hover:border-brandAccent/60 transition-colors text-center group">
+<div class="w-11 h-11 rounded-full border border-slate-700 group-hover:border-brandAccent flex items-center justify-center text-slate-300 group-hover:text-brandAccent transition-colors mb-2.5">
+<i class="fa-solid fa-laptop-code text-sm"></i>
+</div>
+<span class="text-[11px] font-heading font-semibold text-slate-300">Teknologi &amp; IT</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-2xl bg-brandSurface/50 border border-brandBorder hover:border-brandAccent/60 transition-colors text-center group">
+<div class="w-11 h-11 rounded-full border border-slate-700 group-hover:border-brandAccent flex items-center justify-center text-slate-300 group-hover:text-brandAccent transition-colors mb-2.5">
+<i class="fa-solid fa-chart-line text-sm"></i>
+</div>
+<span class="text-[11px] font-heading font-semibold text-slate-300">Pengembangan Diri</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ResumeAndSkillsSection -->
+<!-- BEGIN: ContactAndFooterSection -->
+<section class="py-24 relative overflow-hidden bg-brandSurface/30" id="contact">
+<div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+<p class="text-xs uppercase tracking-[0.3em] font-heading font-semibold text-brandAccent">Get in Touch</p>
+<h2 class="text-4xl sm:text-5xl font-heading font-black tracking-tight text-white uppercase">
+          LET'S CONNECT
+        </h2>
+<p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto leading-relaxed">
+          Terbuka untuk kolaborasi akademik, diskusi teknologi, bimbingan studi, maupun peluang dalam program ikatan kerja industri energi &amp; ketenagalistrikan.
+        </p>
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="px-8 py-3.5 rounded-full bg-brandAccent text-white text-xs font-heading font-semibold uppercase tracking-widest hover:bg-blue-600 transition-all duration-300 shadow-lg shadow-brandAccent/20 flex items-center gap-2" href="mailto:ikramsiregar31@gmail.com">
+<i class="fa-regular fa-envelope"></i>
+<span>Email Me</span>
+</a>
+<a class="px-8 py-3.5 rounded-full border border-brandBorder bg-brandSurface text-slate-300 text-xs font-heading font-semibold uppercase tracking-widest hover:text-white hover:border-slate-500 transition-all duration-300 flex items-center gap-2" href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp text-emerald-400"></i>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Footer Micro Bar -->
+<footer class="mt-20 pt-8 border-t border-brandBorder/60 max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-brandMuted gap-4">
+<div>
+          © 2026 <span class="text-slate-300 font-medium">Muhammad Ikram Mangaraja Siregar</span>. All rights reserved.
+        </div>
+<div class="flex items-center space-x-2 text-[11px] font-mono">
+<span>Kisaran · Jakarta</span>
+<span>—</span>
+<span class="text-brandAccent">Institut Teknologi PLN</span>
+</div>
+</footer>
+</section>
+<!-- END: ContactAndFooterSection -->
+</main>
+<!-- BEGIN: Interactive Scripts -->
+<script data-purpose="smooth-navigation-highlight">
+    // Update active navbar state based on current viewport scroll position
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('header nav a');
+      const sections = document.querySelectorAll('section');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href').replace('#', '');
+          const indicator = link.querySelector('span');
+          if (href === current) {
+            link.classList.remove('text-brandMuted');
+            link.classList.add('text-white');
+            if (!indicator) {
+              const span = document.createElement('span');
+              span.className = 'absolute -bottom-1 left-0 w-full h-[2px] bg-brandAccent rounded-full';
+              link.appendChild(span);
+            }
+          } else {
+            link.classList.add('text-brandMuted');
+            link.classList.remove('text-white');
+            if (indicator) {
+              indicator.remove();
+            }
+          }
+        });
+      });
+    });
+  </script>
+<!-- END: Interactive Scripts -->
+</body></html>
